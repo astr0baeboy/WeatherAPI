@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Destructuring Example</title>
+</head>
+<body>
+
+  <script>
+    const fakeData = {
+      location: { name: "Manila" },
+      current: {
+        temp_c: 30,
+        condition: {
+          text: "Partly Cloudy",
+        },
+      },
+    };
+
+  
+    const {
+      location: { name },
+      current: {
+        temp_c,
+        condition: { text },
+      },
+    } = fakeData;
+
+    console.log(`Weather in ${name}: ${temp_c}℃ and ${text}`);
+  </script>
+
+</body>
+</html>
